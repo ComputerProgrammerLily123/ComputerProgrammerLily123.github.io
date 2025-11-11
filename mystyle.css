@@ -1,0 +1,35 @@
+h1 {
+    color:mediumseagreen;
+    text-align:center;
+}
+body {
+  padding: 4.5rem;
+  margin: 0;
+  background: #ebbd92;
+  background: linear-gradient(90deg, #ebbd92 0,#a96aa2 58%);
+  
+}
+.card {
+  width: 400px;
+  height: auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, .7);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+​
+.card-title {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-size: 1.2rem;
+}
+​
+p, a {
+  font-size: 1rem;
+}
+​
+a {
+  color: #4d4ae8;
+  text-decoration: none;
+}
