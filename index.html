@@ -1,62 +1,64 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="zh-CN">
 <head>
-    <link rel="stylesheet" href="css/mystyle.css">
     <meta charset="UTF-8">
-    <title>李汶徽的个人网站</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="李汶徽的个人作品网站。">
+    <title>李汶徽 | 主页</title>
+    <link rel="stylesheet" href="css/mystyle.css">
 </head>
+<body id="top">
+    <header class="site-header">
+        <nav aria-label="主导航">
+            <a class="is-active" href="index.html">主页</a>
+            <a href="games.html">游戏</a>
+            <a href="graphics.html">图形学</a>
+            <a href="life.html">生活</a>
+        </nav>
+    </header>
 
-<body>
-    <nav class="nav-bar">
-        <span class="nav-brand">李汶徽的个人网站</span>
-        <ul class="nav-menu">
-            <li class="nav-item"><a href="#home">首页</a></li>
-        </ul>
-    </nav>
-    <div class="slider-container" id="sliderContainer">
-        <div class="slider" id="slider">
-            <div class="card">
-                <div class="card-left">
-                    <h2>网站说明</h2>
-                    <p>这里用于分享一些东西。</p>
-                </div>
-                <div class="card-right">
-                    <img src="Profile Icon.jpg" alt="预览图" class="card-image">
-                </div>
+    <main>
+        <section class="hero" aria-labelledby="hero-title">
+            <p class="eyebrow reveal">个人网站 / 2026</p>
+            <h1 id="hero-title" class="hero-title"><span>做游戏，</span><span>也记录生活</span></h1>
+            <div class="hero-meta reveal">
+                <p>独立开发、策划与美术。<br>把想象中的世界做成可以抵达的地方。</p>
+                <a class="text-link" href="games.html">进入作品 <span aria-hidden="true">&#8594;</span></a>
             </div>
-            <div class="card">
-                <div class="card-left">
-                    <h1>荒芜之地</h1>
-                    <p>单人开发，独立完成程序、策划和美术。2.5D，动作，rougelike游戏，包含战斗和经营元素。<b>（开发中）</b></p>
-                </div>
-                <div class="card-right">
-                    <img src="GameScene.png" alt="预览图" class="card-image">
-                </div>
+        </section>
+
+        <section class="section route-overview" aria-labelledby="routes-title">
+            <div class="section-intro reveal">
+                <p class="eyebrow">浏览</p>
+                <h2 id="routes-title">四个方向</h2>
             </div>
-            <div class="card">
-                <div class="card-left">
-                    <h1>灵之界</h1>
-                    <p>一块多人合作开发的3D，动作，rougelike游戏。<b>（开发中）</b></p>
-                </div>
-                <div class="card-right">
-                    <img src="Icon.png" alt="预览图" class="card-image">
-                </div>
+            <div class="route-links">
+                <a class="route-card media-reveal" href="games.html">
+                    <span class="route-card-visual"><img src="GameScene.png" alt="游戏项目预览"></span>
+                    <span class="route-card-content"><span>01 / 游戏项目</span><strong>正在生长的世界 <b aria-hidden="true">&#8594;</b></strong></span>
+                </a>
+                <a class="route-card media-reveal" href="graphics.html">
+                    <span class="route-card-visual route-card-blank" aria-hidden="true"></span>
+                    <span class="route-card-content"><span>02 / 计算机图形学</span><strong>留给下一次开始 <b aria-hidden="true">&#8594;</b></strong></span>
+                </a>
+                <a class="route-card media-reveal" href="life.html">
+                    <span class="route-card-visual"><img src="pictures/1.jpg" alt="日常生活预览"></span>
+                    <span class="route-card-content"><span>03 / 日常生活</span><strong>看见的，留下 <b aria-hidden="true">&#8594;</b></strong></span>
+                </a>
             </div>
-        </div>
-    </div>
-    <!-- 点容器 -->
-    <div class="dots" id="dots"></div>
+        </section>
+
+        <section class="about section reveal" aria-labelledby="about-title">
+            <div class="about-portrait media-reveal"><img src="Profile Icon.jpg" alt="李汶徽的头像"></div>
+            <div class="about-content">
+                <p class="eyebrow">关于我</p>
+                <h2 id="about-title">李汶徽</h2>
+                <p>这里用于存放正在生长的项目、灵感和生活记录。慢一点做，认真一点看。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"><span>李汶徽 / 个人作品</span><a class="text-link" href="#top">回到顶部 <span aria-hidden="true">&#8593;</span></a></footer>
     <script src="js/script.js"></script>
-    <div class="main-content">
-        <h1>欢迎来到我的个人网站！</h1>
-        <div class="picture-exhibition">
-            <img src="pictures/1.jpg" alt="图片1" class="exhibition-image">
-            <img src="pictures/2.jpg" alt="图片2" class="exhibition-image">         
-            <img src="pictures/3.jpg" alt="图片3" class="exhibition-image">
-            <img src="pictures/4.jpg" alt="图片4" class="exhibition-image">
-            <img src="pictures/5.jpg" alt="图片5" class="exhibition-image">
-            </div>
-    </div>
 </body>
 </html>
