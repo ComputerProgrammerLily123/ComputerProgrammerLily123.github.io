@@ -101,6 +101,52 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: 0; }
 }
 .coming-soon { min-height: calc(100svh - 144px); }
 .coming-soon-note { color: var(--muted); margin: 0; }
+.graphics-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1280px;
+    min-height: min(82svh, 880px);
+    padding: 96px 24px;
+}
+.graphics-hero-meta { align-items: end; display: flex; gap: 48px; justify-content: space-between; max-width: 680px; }
+.graphics-hero-meta p { color: var(--muted); margin: 0; }
+.graphics-roadmap, .course-notes, .reference-section { border-top: 1px solid var(--line); }
+.roadmap-list { border-top: 1px solid var(--line); counter-reset: route; list-style: none; margin: 0; padding: 0; }
+.roadmap-list li { align-items: baseline; border-bottom: 1px solid var(--line); display: grid; gap: 24px; grid-template-columns: 88px minmax(220px, 4fr) minmax(240px, 5fr); padding: 24px 0; }
+.roadmap-list span, .note-group-label { color: var(--muted); font-size: 13px; }
+.roadmap-list strong { font-family: var(--serif); font-size: clamp(26px, 3vw, 40px); font-weight: 400; line-height: 1.1; }
+.roadmap-list p { color: var(--muted); margin: 0; }
+.note-group { border-top: 1px solid var(--line); margin-top: 72px; }
+.note-group:first-of-type { margin-top: 0; }
+.note-group-label { margin: 16px 0 32px; }
+.lecture-note { border-bottom: 1px solid var(--line); }
+.lecture-note summary { align-items: baseline; cursor: pointer; display: grid; gap: 24px; grid-template-columns: 56px 1fr 16px; list-style: none; padding: 20px 0; }
+.lecture-note summary::-webkit-details-marker { display: none; }
+.lecture-note summary::after { content: "+"; font-size: 20px; line-height: 1; text-align: right; transition: transform 400ms var(--ease-editorial); }
+.lecture-note[open] summary::after { transform: rotate(45deg); }
+.lecture-note summary span { color: var(--muted); font-size: 13px; }
+.lecture-note summary strong { font-family: var(--serif); font-size: clamp(24px, 2.4vw, 34px); font-weight: 400; line-height: 1.1; }
+.lecture-note ul { color: var(--muted); margin: 0; max-width: 680px; padding: 0 0 24px 20px; }
+.lecture-note li { margin: 0 0 10px; padding-left: 4px; }
+.assignment-work { margin: 24px 0 56px; }
+.assignment-image { background: var(--bg-quiet); border-radius: var(--radius-md); overflow: hidden; }
+.assignment-image img { height: auto; width: 100%; }
+.assignment-work figcaption { align-items: baseline; display: flex; gap: 24px; justify-content: space-between; padding-top: 12px; }
+.assignment-work figcaption span { color: var(--muted); font-size: 13px; }
+.assignment-work figcaption strong { font-family: var(--serif); font-size: clamp(22px, 2vw, 30px); font-weight: 400; line-height: 1.1; text-align: right; }
+code { font-family: "Courier New", monospace; font-size: 0.9em; }
+.reference-grid { display: grid; gap: 48px; grid-template-columns: minmax(0, 7fr) minmax(260px, 5fr); }
+.formula-table, .practice-list, .term-index { border-top: 1px solid var(--line); }
+.formula-table dl { margin: 0; }
+.formula-table dl > div { border-bottom: 1px solid var(--line); display: grid; gap: 24px; grid-template-columns: minmax(112px, 1fr) minmax(0, 3fr); padding: 14px 0; }
+.formula-table dt { font-family: var(--serif); font-size: 20px; }
+.formula-table dd, .practice-list li, .term-index p { color: var(--muted); margin: 0; }
+.practice-list ol { color: var(--muted); margin: 0; padding-left: 20px; }
+.practice-list li { border-bottom: 1px solid var(--line); padding: 12px 0; }
+.term-index { margin-top: 72px; }
+.term-index p { line-height: 1.8; max-width: 880px; }
 .route-overview { border-top: 1px solid var(--line); }
 .route-links { border-top: 1px solid var(--line); }
 .route-card {
@@ -200,12 +246,14 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: 0; }
     .site-header nav { display: flex; gap: 12px; }
     .site-header nav a { font-size: 12px; }
     .mobile-project-link { display: none; }
-    .hero, .section, .site-footer, .page-hero, .coming-soon { padding-left: 16px; padding-right: 16px; }
+    .hero, .section, .site-footer, .page-hero, .coming-soon, .graphics-hero { padding-left: 16px; padding-right: 16px; }
     .hero { min-height: calc(100svh - 64px); padding-bottom: 64px; padding-top: 64px; }
     .hero-title { font-size: clamp(52px, 17vw, 84px); margin-bottom: 48px; }
     .hero-meta, .split-intro { align-items: start; flex-direction: column; gap: 24px; }
     .section { padding-bottom: 88px; padding-top: 88px; }
     .page-hero { min-height: min(64svh, 600px); padding-bottom: 64px; padding-top: 64px; }
+    .graphics-hero { min-height: calc(100svh - 64px); padding-bottom: 64px; padding-top: 64px; }
+    .graphics-hero-meta { align-items: start; flex-direction: column; gap: 24px; }
     .section-intro { margin-bottom: 48px; }
     .project, .project-featured, .project-secondary, .about { gap: 24px; grid-template-columns: 1fr; margin-top: 64px; }
     .project-secondary .project-details { order: 2; }
@@ -219,6 +267,17 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 400; letter-spacing: 0; }
     .route-card { grid-template-columns: 1fr; }
     .route-card-visual { min-height: 220px; }
     .route-card-content { gap: 48px; }
+    .roadmap-list li { gap: 12px; grid-template-columns: 64px 1fr; }
+    .roadmap-list p { grid-column: 2; }
+    .note-group { margin-top: 48px; }
+    .lecture-note summary { gap: 12px; grid-template-columns: 42px 1fr 16px; }
+    .lecture-note ul { padding-left: 18px; }
+    .assignment-work { margin-bottom: 40px; }
+    .assignment-work figcaption { align-items: start; flex-direction: column; gap: 8px; }
+    .assignment-work figcaption strong { text-align: left; }
+    .reference-grid { gap: 48px; grid-template-columns: 1fr; }
+    .formula-table dl > div { gap: 12px; grid-template-columns: 1fr; }
+    .term-index { margin-top: 48px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
