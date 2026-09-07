@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="李汶徽的 3D 建模作品，包含 PBR 与 NBR 风格化建模。">
+    <title>李汶徽 | 3D 建模</title>
+    <script>
+        try {
+            const theme = localStorage.getItem("site-theme") || "light";
+            document.documentElement.dataset.theme = theme;
+            document.documentElement.style.colorScheme = theme;
+            document.documentElement.style.backgroundColor = theme === "dark" ? "#17191c" : "#f3f6fa";
+        } catch {
+            document.documentElement.dataset.theme = "light";
+            document.documentElement.style.backgroundColor = "#f3f6fa";
+        }
+    </script>
+    <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body id="top" class="sub-page modeling-page">
+    <header class="site-header home-header">
+        <a class="home-brand" href="index.html" aria-label="李汶徽的主页"><span class="brand-mark" aria-hidden="true">LW</span><span>李汶徽</span></a>
+        <nav aria-label="主导航"><a href="index.html">主页</a><a href="games.html">游戏开发</a><a class="is-active" href="modeling.html">建模作品</a><a href="graphics.html">图形学</a><a href="life.html">日常生活</a></nav>
+        <div class="header-actions">
+            <a class="icon-button" href="https://github.com/ComputerProgrammerLily123" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.82c.85 0 1.7.11 2.5.34 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.56 4.93.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+            <button class="icon-button theme-toggle" type="button" aria-label="切换深浅色" title="切换深浅色"><svg class="sun-icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></button>
+        </div>
+    </header>
+
+    <main class="page-main">
+        <section class="page-hero" aria-labelledby="modeling-title">
+            <p class="eyebrow reveal">02 / 3D 建模</p>
+            <h1 id="modeling-title" class="hero-title"><span>塑造形体，</span><span>雕琢质感</span></h1>
+            <div class="page-hero-meta reveal"><p>从基础形体到材质、灯光与最终呈现，<br>记录写实与风格化建模的练习。</p><span class="hero-chip">15 项作品</span></div>
+        </section>
+
+        <section id="pbr" class="modeling-section section" aria-labelledby="pbr-title">
+            <div class="modeling-category-head reveal">
+                <div><p class="panel-kicker">PHYSICALLY BASED</p><h2 id="pbr-title">PBR</h2></div>
+                <span>09 件</span>
+            </div>
+            <div class="modeling-grid">
+                <figure class="model-card model-card-video media-reveal">
+                    <div class="model-card-media"><video controls playsinline preload="metadata" aria-label="千禧年建模作品视频"><source src="pictures/modeling/PBR/千禧年.mp4" type="video/mp4">你的浏览器不支持视频播放。</video></div>
+                    <figcaption><strong>千禧年</strong><span>动态展示</span></figcaption>
+                </figure>
+                <figure class="model-card media-reveal"><div class="model-card-media"><img src="pictures/modeling/PBR/匕首1.png" alt="匕首建模作品正面展示" loading="lazy" decoding="async"></div><figcaption><strong>匕首 · 01</strong><span>PBR</span></figcaption></figure>
+                <figure class="model-card media-reveal"><div class="model-card-media"><img src="pictures/modeling/PBR/匕首2.png" alt="匕首建模作品材质展示" loading="lazy" decoding="async"></div><figcaption><strong>匕首 · 02</strong><span>PBR</span></figcaption></figure>
+                <figure class="model-card media-reveal"><div class="model-card-media"><img src="pictures/modeling/PBR/桃子.png" alt="桃子 PBR 建模渲染" loading="lazy" decoding="async"></div><figcaption><strong>桃子</strong><span>PBR</span></figcaption></figure>
+                <figure class="model-card media-reveal"><div class="model-card-media"><img src="pictures/modeling/PBR/葡萄.png" alt="葡萄 PBR 建模渲染" loading="lazy" decoding="async"></div><figcaption><strong>葡萄</strong><span>PBR</span></figcaption></figure>
+                <figure class="model-card media-reveal"><div class="model-card-media"><img src="pictures/modeling/PBR/水杯1.png" alt="水杯建模作品展示一" loading="lazy" decoding="async"></div><figcaption><strong>水杯 · 01</strong><span>PBR</span></figcaption></figure>
+                <figure class="model-card media-reveal"><div class="model-card-media"><img src="pictures/modeling/PBR/水杯2.png" alt="水杯建模作品展示二" loading="lazy" decoding="async"></div><figcaption><strong>水杯 · 02</strong><span>PBR</span></figcaption></figure>
+                <figure class="model-card media-reveal"><div class="model-card-media"><img src="pictures/modeling/PBR/水杯3.png" alt="水杯建模作品展示三" loading="lazy" decoding="async"></div><figcaption><strong>水杯 · 03</strong><span>PBR</span></figcaption></figure>
+                <figure class="model-card media-reveal"><div class="model-card-media"><img src="pictures/modeling/PBR/煤油灯.png" alt="煤油灯 PBR 建模渲染" loading="lazy" decoding="async"></div><figcaption><strong>煤油灯</strong><span>PBR</span></figcaption></figure>
+            </div>
+        </section>
+
+        <section id="nbr" class="modeling-section section" aria-labelledby="nbr-title">
+            <div class="modeling-category-head reveal">
+                <div><p class="panel-kicker">STYLIZED</p><h2 id="nbr-title">NBR</h2></div>
+                <span>06 件</span>
+            </div>
+            <div class="modeling-grid">
+                <figure class="model-card model-card-video media-reveal">
+                    <div class="model-card-media"><video controls playsinline preload="metadata" aria-label="枯木生花建模作品视频"><source src="pictures/modeling/NBR/枯木生花.mp4" type="video/mp4">你的浏览器不支持视频播放。</video></div>
+                    <figcaption><strong>枯木生花</strong><span>动态展示</span></figcaption>
+                </figure>
+                <figure class="model-card media-reveal"><div class="model-card-media"><img src="pictures/modeling/NBR/花海地铁.png" alt="花海地铁风格化场景建模" loading="lazy" decoding="async"></div><figcaption><strong>地铁</strong><span>NBR</span></figcaption></figure>
+                <figure class="model-card media-reveal"><div class="model-card-media"><img src="pictures/modeling/NBR/迫击炮.png" alt="迫击炮风格化建模" loading="lazy" decoding="async"></div><figcaption><strong>迫击炮</strong><span>NBR</span></figcaption></figure>
+                <figure class="model-card media-reveal"><div class="model-card-media"><img src="pictures/modeling/NBR/宝箱.png" alt="宝箱风格化建模" loading="lazy" decoding="async"></div><figcaption><strong>宝箱</strong><span>NBR</span></figcaption></figure>
+                <figure class="model-card media-reveal"><div class="model-card-media"><img src="pictures/modeling/NBR/桌子.png" alt="桌子风格化建模" loading="lazy" decoding="async"></div><figcaption><strong>桌子</strong><span>NBR</span></figcaption></figure>
+                <figure class="model-card model-card-wide media-reveal"><div class="model-card-media"><img src="pictures/modeling/NBR/deca and donu.png" alt="Deca 和 Donu 角色建模" loading="lazy" decoding="async"></div><figcaption><strong>Deca and Donu</strong><span>NBR</span></figcaption></figure>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer"><span>李汶徽 / 3D 建模</span><a class="text-link" href="#top">回到顶部 <span aria-hidden="true">&#8593;</span></a></footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

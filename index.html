@@ -3,62 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="李汶徽的个人作品网站。">
-    <title>李汶徽 | 主页</title>
+    <meta name="description" content="李汶徽的个人作品网站，记录游戏开发、3D 建模、计算机图形学与日常生活。">
+    <meta name="theme-color" content="#f3f6fa">
+    <title>李汶徽 | 个人主页</title>
+    <script>
+        try {
+            const theme = localStorage.getItem("site-theme") || "light";
+            document.documentElement.dataset.theme = theme;
+            document.documentElement.style.colorScheme = theme;
+            document.documentElement.style.backgroundColor = theme === "dark" ? "#17191c" : "#f3f6fa";
+        } catch {
+            document.documentElement.dataset.theme = "light";
+            document.documentElement.style.backgroundColor = "#f3f6fa";
+        }
+    </script>
     <link rel="stylesheet" href="css/mystyle.css">
 </head>
-<body id="top">
-    <header class="site-header">
+<body id="top" class="home-page">
+    <header class="site-header home-header">
+        <a class="home-brand" href="index.html" aria-label="李汶徽的主页">
+            <span class="brand-mark" aria-hidden="true">LW</span>
+            <span>李汶徽</span>
+        </a>
         <nav aria-label="主导航">
             <a class="is-active" href="index.html">主页</a>
-            <a href="games.html">游戏</a>
+            <a href="games.html">游戏开发</a>
+            <a href="modeling.html">建模作品</a>
             <a href="graphics.html">图形学</a>
-            <a href="life.html">生活</a>
+            <a href="life.html">日常生活</a>
         </nav>
+        <div class="header-actions">
+            <a class="icon-button" href="https://github.com/ComputerProgrammerLily123" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub">
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.82c.85 0 1.7.11 2.5.34 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.56 4.93.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+            </a>
+            <button class="icon-button theme-toggle" type="button" aria-label="切换深浅色" title="切换深浅色">
+                <svg class="sun-icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
+            </button>
+        </div>
     </header>
 
-    <main>
-        <section class="hero" aria-labelledby="hero-title">
-            <p class="eyebrow reveal">个人网站 / 2026</p>
-            <h1 id="hero-title" class="hero-title"><span>做游戏，</span><span>也记录生活</span></h1>
-            <div class="hero-meta reveal">
-                <p>独立开发、策划与美术。<br>把想象中的世界做成可以抵达的地方。</p>
-                <a class="text-link" href="games.html">进入作品 <span aria-hidden="true">&#8594;</span></a>
+    <main class="home-main">
+        <section class="dashboard-grid" aria-label="个人简介">
+            <article class="profile-panel reveal" id="about">
+                <div class="profile-main">
+                    <img src="pictures/Profile Icon.jpg" alt="李汶徽的头像">
+                    <div>
+                        <p class="panel-kicker">游戏开发者 / 创作者</p>
+                        <h1>李汶徽</h1>
+                        <p class="profile-copy">记录学习与生活</p>
+                    </div>
+                </div>
+                <div class="profile-footer">
+                    <a class="soft-button" href="games.html">查看作品 <span aria-hidden="true">&#8594;</span></a>
+                    <span>独立开发 · 策划 · 美术</span>
+                </div>
+            </article>
+
+            <div class="photo-panel media-reveal" aria-label="生活照片拼贴">
+                <img class="photo-one" src="pictures/daily/1.jpg" alt="山间旅行记录">
+                <img class="photo-two" src="pictures/daily/5.jpg" alt="日常生活记录">
+                <img class="photo-three" src="pictures/daily/4.jpg" alt="沿途风景记录">
             </div>
+
+            <a class="welcome-panel reveal" href="games.html">
+                <div>
+                    <p class="panel-kicker">WELCOME</p>
+                    <h2>欢迎光临</h2>
+                </div>
+                <div class="welcome-art" aria-hidden="true">
+                    <span>&lt;/&gt;</span><span>3D</span><span>PLAY</span>
+                </div>
+                <span class="round-arrow" aria-hidden="true">&#8594;</span>
+            </a>
+
+            <blockquote class="quote-panel reveal">
+                <p>以技术为笔，<br>描绘想象中的世界。</p>
+                <footer>慢一点做，认真一点看。</footer>
+            </blockquote>
+
+            <dl class="stats-panel reveal" aria-label="网站内容概览">
+                <div><dt>游戏项目</dt><dd>02</dd></div>
+                <div><dt>内容方向</dt><dd>04</dd></div>
+                <div><dt>学习专题</dt><dd>01</dd></div>
+                <div><dt>生活照片</dt><dd>05</dd></div>
+            </dl>
         </section>
 
-        <section class="section route-overview" aria-labelledby="routes-title">
-            <div class="section-intro reveal">
-                <p class="eyebrow">浏览</p>
-                <h2 id="routes-title">四个方向</h2>
+        <section class="home-content" aria-labelledby="explore-title">
+            <div class="content-heading reveal">
+                <div>
+                    <p class="panel-kicker">EXPLORE</p>
+                </div>
             </div>
-            <div class="route-links">
-                <a class="route-card media-reveal" href="games.html">
-                    <span class="route-card-visual"><img src="GameScene.png" alt="游戏项目预览"></span>
-                    <span class="route-card-content"><span>01 / 游戏项目</span><strong>正在生长的世界 <b aria-hidden="true">&#8594;</b></strong></span>
-                </a>
-                <a class="route-card media-reveal" href="graphics.html">
-                    <span class="route-card-visual route-card-blank" aria-hidden="true"></span>
-                    <span class="route-card-content"><span>02 / 计算机图形学</span><strong>留给下一次开始 <b aria-hidden="true">&#8594;</b></strong></span>
-                </a>
-                <a class="route-card media-reveal" href="life.html">
-                    <span class="route-card-visual"><img src="pictures/1.jpg" alt="日常生活预览"></span>
-                    <span class="route-card-content"><span>03 / 日常生活</span><strong>看见的，留下 <b aria-hidden="true">&#8594;</b></strong></span>
-                </a>
-            </div>
-        </section>
 
-        <section class="about section reveal" aria-labelledby="about-title">
-            <div class="about-portrait media-reveal"><img src="Profile Icon.jpg" alt="李汶徽的头像"></div>
-            <div class="about-content">
-                <p class="eyebrow">关于我</p>
-                <h2 id="about-title">李汶徽</h2>
-                <p>这里用于存放正在生长的项目、灵感和生活记录。慢一点做，认真一点看。</p>
+            <div class="content-grid">
+                <a class="content-card media-reveal" href="games.html">
+                    <span class="card-image"><img src="pictures/gameDev/GameScene.png" alt="荒芜之地游戏场景"></span>
+                    <span class="card-body">
+                        <span class="card-meta">01 / 游戏开发</span>
+                        <strong>荒芜之地</strong>
+                        <span class="card-copy">独立完成程序、策划与美术的 2.5D 动作 Roguelike。</span>
+                        <span class="card-link">查看项目 <b aria-hidden="true">&#8594;</b></span>
+                    </span>
+                </a>
+                <a class="content-card media-reveal" href="graphics.html">
+                    <span class="card-image"><img src="pictures/games101/作业7.png" alt="GAMES101 光线追踪作业效果"></span>
+                    <span class="card-body">
+                        <span class="card-meta">02 / 计算机图形学</span>
+                        <strong>GAMES101 笔记</strong>
+                        <span class="card-copy">从变换、光栅化到光线追踪的学习记录。</span>
+                        <span class="card-link">阅读笔记 <b aria-hidden="true">&#8594;</b></span>
+                    </span>
+                </a>
+                <a class="content-card media-reveal" href="life.html">
+                    <span class="card-image"><img src="pictures/daily/1.jpg" alt="山间旅行照片"></span>
+                    <span class="card-body">
+                        <span class="card-meta">03 / 日常生活</span>
+                        <strong>看见的，留下</strong>
+                        <span class="card-copy">收藏路上的风景，也收藏普通日子的微光。</span>
+                        <span class="card-link">翻看相册 <b aria-hidden="true">&#8594;</b></span>
+                    </span>
+                </a>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer"><span>李汶徽 / 个人作品</span><a class="text-link" href="#top">回到顶部 <span aria-hidden="true">&#8593;</span></a></footer>
+    <footer class="site-footer home-footer">
+        <span>李汶徽 © 2026</span>
+        <a class="text-link" href="#top">回到顶部 <span aria-hidden="true">&#8593;</span></a>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 </html>

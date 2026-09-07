@@ -5,16 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="李汶徽的 GAMES101 计算机图形学课程笔记。">
     <title>李汶徽 | 计算机图形学</title>
+    <script>
+        try {
+            const theme = localStorage.getItem("site-theme") || "light";
+            document.documentElement.dataset.theme = theme;
+            document.documentElement.style.colorScheme = theme;
+            document.documentElement.style.backgroundColor = theme === "dark" ? "#17191c" : "#f3f6fa";
+        } catch {
+            document.documentElement.dataset.theme = "light";
+            document.documentElement.style.backgroundColor = "#f3f6fa";
+        }
+    </script>
     <link rel="stylesheet" href="css/mystyle.css">
 </head>
-<body id="top">
-    <header class="site-header">
-        <nav aria-label="主导航"><a href="index.html">主页</a><a href="games.html">游戏</a><a class="is-active" href="graphics.html">图形学</a><a href="life.html">生活</a></nav>
+<body id="top" class="sub-page graphics-page">
+    <header class="site-header home-header">
+        <a class="home-brand" href="index.html" aria-label="李汶徽的主页"><span class="brand-mark" aria-hidden="true">LW</span><span>李汶徽</span></a>
+        <nav aria-label="主导航"><a href="index.html">主页</a><a href="games.html">游戏开发</a><a href="modeling.html">建模作品</a><a class="is-active" href="graphics.html">图形学</a><a href="life.html">日常生活</a></nav>
+        <div class="header-actions">
+            <a class="icon-button" href="https://github.com/ComputerProgrammerLily123" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.82c.85 0 1.7.11 2.5.34 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.56 4.93.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+            <button class="icon-button theme-toggle" type="button" aria-label="切换深浅色" title="切换深浅色"><svg class="sun-icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></button>
+        </div>
     </header>
 
     <main class="page-main">
         <section class="graphics-hero" aria-labelledby="graphics-title">
-            <p class="eyebrow reveal">02 / 计算机图形学</p>
+            <p class="eyebrow reveal">03 / 计算机图形学</p>
             <h1 id="graphics-title" class="hero-title"><span>GAMES101</span><span>课程笔记</span></h1>
             <div class="graphics-hero-meta reveal">
                 <p>从表示与变换，到渲染、几何、成像与模拟。<br>22 讲学习路径与重点速查。</p>
@@ -67,12 +83,12 @@
             <div class="note-group reveal">
                 <p class="note-group-label">13-18 / 离线渲染</p>
                 <details class="lecture-note"><summary><span>13</span><strong>Whitted 光线追踪</strong></summary><ul><li>针孔相机为每像素生成射线 <code>r(t)=o+td</code>，取场景最近交点。</li><li>三角形求交可使用 Möller-Trumbore；递归包含可见性、阴影、镜面反射和折射射线。</li><li>适合直观表现反射与折射，但不能正确表示漫反射间接光和复杂全局光照。</li></ul></details>
-                <figure id="assignment-5" class="assignment-work media-reveal"><div class="assignment-image"><img src="games101/作业5.png" alt="GAMES101 作业 5 的光线追踪场景，展示球体、镜面反射、折射和棋盘平面" decoding="async"></div><figcaption><span>作业 5 / 光线追踪</span><strong>镜面、折射与阴影</strong></figcaption></figure>
+                <figure id="assignment-5" class="assignment-work media-reveal"><div class="assignment-image"><img src="pictures/games101/作业5.png" alt="GAMES101 作业 5 的光线追踪场景，展示球体、镜面反射、折射和棋盘平面" decoding="async"></div><figcaption><span>作业 5 / 光线追踪</span><strong>镜面、折射与阴影</strong></figcaption></figure>
                 <details class="lecture-note"><summary><span>14</span><strong>加速结构与辐射度量</strong></summary><ul><li>AABB 通过三对 slab 求交；空间划分包括均匀网格、BSP/KD-tree 和 Octree。</li><li>BVH 按物体集合递归构建包围盒，通常按最长轴和中位数切分。</li><li>辐射度量含通量、光强、辐照度、辐亮度；Radiance 是沿射线传输与渲染的核心量。</li></ul></details>
-                <figure id="assignment-6" class="assignment-work media-reveal"><div class="assignment-image"><img src="games101/作业6.png" alt="GAMES101 作业 6 的低多边形兔子模型渲染" decoding="async"></div><figcaption><span>作业 6 / BVH 加速</span><strong>兔子模型的光线求交</strong></figcaption></figure>
+                <figure id="assignment-6" class="assignment-work media-reveal"><div class="assignment-image"><img src="pictures/games101/作业6.png" alt="GAMES101 作业 6 的低多边形兔子模型渲染" decoding="async"></div><figcaption><span>作业 6 / BVH 加速</span><strong>兔子模型的光线求交</strong></figcaption></figure>
                 <details class="lecture-note"><summary><span>15</span><strong>光传输与全局光照</strong></summary><ul><li>反射方程：<code>L_o(p,ω_o)=∫_H f_r L_i cosθ_i dω_i</code>。</li><li>渲染方程加入自发光 <code>L_e</code>，递归描述多次反弹。</li><li>BRDF 应满足非负、能量守恒与互易性；全局光照通常需要 Monte Carlo 估计。</li></ul></details>
                 <details class="lecture-note"><summary><span>16</span><strong>Monte Carlo 路径追踪</strong></summary><ul><li><code>∫f(x)dx ≈ (1/N)Σ f(X_i)/p(X_i)</code>，误差随 <code>1/√N</code> 收敛。</li><li>路径追踪从相机出发，按 BRDF 采样新方向并累积 throughput。</li><li>Russian roulette 以概率终止长路径并补偿权重；重要性采样比均匀半球采样更有效。</li></ul></details>
-                <figure id="assignment-7" class="assignment-work media-reveal"><div class="assignment-image"><img src="games101/作业7.png" alt="GAMES101 作业 7 的 Cornell Box 路径追踪渲染结果" decoding="async"></div><figcaption><span>作业 7 / 路径追踪</span><strong>Cornell Box 的全局光照</strong></figcaption></figure>
+                <figure id="assignment-7" class="assignment-work media-reveal"><div class="assignment-image"><img src="pictures/games101/作业7.png" alt="GAMES101 作业 7 的 Cornell Box 路径追踪渲染结果" decoding="async"></div><figcaption><span>作业 7 / 路径追踪</span><strong>Cornell Box 的全局光照</strong></figcaption></figure>
                 <details class="lecture-note"><summary><span>17</span><strong>材质与 BRDF</strong></summary><ul><li>Lambert 为均匀漫反射；镜面反射遵循反射定律；折射遵循 Snell 定律。</li><li>Fresnel 表示反射率随入射角变化，掠射角反射更强。</li><li>Microfacet 由法线分布、Fresnel 和几何遮蔽项共同决定，可描述粗糙度与各向异性。</li></ul></details>
                 <details class="lecture-note"><summary><span>18</span><strong>高级光传输与外观</strong></summary><ul><li>无偏方法有 BDPT、MLT；Photon Mapping、VCM 属于有偏但一致的方法。</li><li>Photon Mapping 从光源发射并存储 photon，再在相机路径的邻域做密度估计。</li><li>高级外观包括参与介质、头发、半透明 BSSRDF、布料、颗粒和程序化材质。</li></ul></details>
             </div>

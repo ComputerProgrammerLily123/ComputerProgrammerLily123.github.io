@@ -5,24 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="李汶徽的日常生活记录。">
     <title>李汶徽 | 日常生活</title>
+    <script>
+        try {
+            const theme = localStorage.getItem("site-theme") || "light";
+            document.documentElement.dataset.theme = theme;
+            document.documentElement.style.colorScheme = theme;
+            document.documentElement.style.backgroundColor = theme === "dark" ? "#17191c" : "#f3f6fa";
+        } catch {
+            document.documentElement.dataset.theme = "light";
+            document.documentElement.style.backgroundColor = "#f3f6fa";
+        }
+    </script>
     <link rel="stylesheet" href="css/mystyle.css">
 </head>
-<body id="top">
-    <header class="site-header">
-        <nav aria-label="主导航"><a href="index.html">主页</a><a href="games.html">游戏</a><a href="graphics.html">图形学</a><a class="is-active" href="life.html">生活</a></nav>
+<body id="top" class="sub-page life-page">
+    <header class="site-header home-header">
+        <a class="home-brand" href="index.html" aria-label="李汶徽的主页"><span class="brand-mark" aria-hidden="true">LW</span><span>李汶徽</span></a>
+        <nav aria-label="主导航"><a href="index.html">主页</a><a href="games.html">游戏开发</a><a href="modeling.html">建模作品</a><a href="graphics.html">图形学</a><a class="is-active" href="life.html">日常生活</a></nav>
+        <div class="header-actions">
+            <a class="icon-button" href="https://github.com/ComputerProgrammerLily123" target="_blank" rel="noreferrer" aria-label="GitHub" title="GitHub"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.87c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.82c.85 0 1.7.11 2.5.34 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.56 4.93.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+            <button class="icon-button theme-toggle" type="button" aria-label="切换深浅色" title="切换深浅色"><svg class="sun-icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></button>
+        </div>
     </header>
     <main class="page-main">
         <section class="page-hero" aria-labelledby="life-title">
-            <p class="eyebrow reveal">03 / 日常生活</p>
+            <p class="eyebrow reveal">04 / 日常生活</p>
             <h1 id="life-title" class="hero-title"><span>看见的，</span><span>留下</span></h1>
+            <div class="page-hero-meta reveal"><p>收藏路上的风景，<br>也收藏普通日子的微光。</p><span class="hero-chip">05 张照片</span></div>
         </section>
         <section class="moments section" aria-label="日常生活图片">
             <div class="gallery">
-                <figure class="gallery-item gallery-item-large media-reveal"><img src="pictures/1.jpg" alt="生活记录 1"></figure>
-                <figure class="gallery-item media-reveal"><img src="pictures/2.jpg" alt="生活记录 2" loading="lazy" decoding="async"></figure>
-                <figure class="gallery-item media-reveal"><img src="pictures/3.jpg" alt="生活记录 3" loading="lazy" decoding="async"></figure>
-                <figure class="gallery-item media-reveal"><img src="pictures/4.jpg" alt="生活记录 4" loading="lazy" decoding="async"></figure>
-                <figure class="gallery-item gallery-item-wide media-reveal"><img src="pictures/5.jpg" alt="生活记录 5" loading="lazy" decoding="async"></figure>
+                <figure class="gallery-item gallery-item-large media-reveal"><img src="pictures/daily/1.jpg" alt="生活记录 1" decoding="async"></figure>
+                <figure class="gallery-item media-reveal"><img src="pictures/daily/2.jpg" alt="生活记录 2" decoding="async"></figure>
+                <figure class="gallery-item media-reveal"><img src="pictures/daily/3.jpg" alt="生活记录 3" decoding="async"></figure>
+                <figure class="gallery-item media-reveal"><img src="pictures/daily/4.jpg" alt="生活记录 4" decoding="async"></figure>
+                <figure class="gallery-item gallery-item-wide media-reveal"><img src="pictures/daily/5.jpg" alt="生活记录 5" decoding="async"></figure>
             </div>
         </section>
     </main>
